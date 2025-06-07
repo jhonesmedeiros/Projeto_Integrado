@@ -1,146 +1,157 @@
-{
+/* ==============================
+    Reset e Configurações Globais
+   ============================== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: linear-gradient(to right, #ffc0cb, #87cefa); /* Rosa pra azul */
+    font-family: 'Arial', sans-serif;
+    background-color: #fff0f6;
     color: #333;
     line-height: 1.6;
-    text-align: center;
 }
 
-/* Container geral centralizado */
-section,
-header,
-footer {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
-/* Cabeçalho */
+/* ==============================
+    Cabeçalho e Navegação
+   ============================== */
 header {
-    background-color: #ff66cc;
-    color: white;
+    background-color: #a2d2ff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.logo {
+    height: 60px;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    list-style: none;
     gap: 20px;
-    padding-top: 10px;
 }
 
-nav ul li a {
-    color: white;
+nav a {
     text-decoration: none;
+    color: #ff5fa2;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Hero section */
+/* ==============================
+    Hero Section (Página Inicial)
+   ============================== */
 .hero {
-    background-color: #87cefa;
-    color: white;
+    text-align: center;
+    background-color: #ffe0f0;
     padding: 60px 20px;
-    border-radius: 15px;
 }
 
-.hero h2 {
-    font-size: 2rem;
+.hero h1 {
+    font-size: 2.5rem;
+    color: #ff5fa2;
+}
+
+/* ==============================
+    Seção de Contato
+   ============================== */
+.contato {
+    background-color: #d0f0ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contato img {
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.contato a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ==============================
+    Página Catálogo
+   ============================== */
+.catalogo-pagina {
+    padding: 40px 20px;
+    background-color: #f0f8ff;
+}
+
+.catalogo-pagina h1 {
+    text-align: center;
+    color: #ff5fa2;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.brincadeiras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.brincadeira {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.brincadeira:hover {
+    transform: scale(1.03);
+}
+
+.brincadeira img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.brincadeira h2 {
+    color: #0077cc;
+    font-size: 1.4rem;
     margin-bottom: 10px;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.brincadeira p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
 }
 
-/* Botões estilosos */
-.btn {
-    display: inline-block;
-    background-color: #ff69b4;
+.brincadeira button {
+    background-color: #ff5fa2;
     color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
-    transition: 0.3s;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #ff1493;
+.brincadeira button:hover {
+    background-color: #ff3d8b;
 }
 
-.btn-whatsapp {
-    background-color: #25d366;
-}
-
-.btn-whatsapp:hover {
-    background-color: #128c7e;
-}
-
-.btn-instagram {
-    background-color: #e1306c;
-}
-
-.btn-instagram:hover {
-    background-color: #c13584;
-}
-
-/* Seções */
-#sobre {
-    background-color: #ffe6f0;
-}
-
-#servicos {
-    background-color: #e0f0ff;
-}
-
-#contato {
-    background-color: #ffe0f5;
-}
-
-.servicos {
-    list-style: none;
-    padding: 0;
-    font-size: 1.1rem;
-}
-
-.servicos li {
-    margin: 10px 0;
-}
-
-/* Rodapé */
+/* ==============================
+    Rodapé
+   ============================== */
 footer {
-    background-color: #ff3399;
-    color: white;
-    padding: 20px;
+    background-color: #a2d2ff;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
     font-size: 0.9rem;
-    border-radius: 0 0 15px 15px;
-}
-
-/* imagens */
-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid pink;   
+    margin-top: 40px;
 }
